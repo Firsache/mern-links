@@ -1,6 +1,5 @@
 const { Router } = require("express");
 const shortid = require("shortid");
-// const nanoid = require("nanoid");
 const config = require("config");
 const Link = require("../models/Link");
 const auth = require("../middleware/auth.middleware");
@@ -11,7 +10,6 @@ router.post("/generate", auth, async (req, res) => {
   try {
     const baseUrl = config.get("baseUrl");
     const { from } = req.body;
-    // const code = nanoid(7);
     const code = shortid.generate();
 
     const existing = await Link.findOne({ from });
