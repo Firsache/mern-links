@@ -1,0 +1,5 @@
+{
+  "port": 5000,
+  "mongoUri": "mongodb+srv://firsovalyub:a05aThg4GmIru9QD@cluster0.xnvxoij.mongodb.net/links?retryWrites=true&w=majority",
+  "jwtSecret": "liubov links mern"
+}
