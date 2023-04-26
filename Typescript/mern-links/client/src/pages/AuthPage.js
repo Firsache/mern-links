@@ -1,7 +1,7 @@
 export const AuthPage = () => {
   return (
     <div>
-      <h1>Auth page</h1>
+      <h1>Auth page and registration</h1>
     </div>
   );
 };
