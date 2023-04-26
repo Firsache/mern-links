@@ -1,11 +1,9 @@
 import "materialize-css";
+import { useRoutes } from "./routes";
 
 function App() {
-  return (
-    <div className="container">
-      <h1>Hiiiii</h1>
-    </div>
-  );
+  const routes = useRoutes(true);
+  return <div className="container">{routes}</div>;
 }
 
 export default App;
