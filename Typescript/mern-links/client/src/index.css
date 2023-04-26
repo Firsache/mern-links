@@ -1,1 +1,15 @@
 @import "~materialize-css/dist/css/materialize.min.css";
+
+.input-field label {
+  color: #ffffff;
+}
+.input-field input[type="text"]:focus + label {
+  color: #00796b;
+}
+input[type="text"]::placeholder {
+  color: #ffffff;
+}
+input[type="text"]:not(.browser-default),
+input[type="password"]:not(.browser-default) {
+  border-bottom: 1px solid #ffffff;
+}
