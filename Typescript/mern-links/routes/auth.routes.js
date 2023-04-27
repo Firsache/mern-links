@@ -21,7 +21,7 @@ router.post(
       if (!errors.isEmpty()) {
         return res.status(400).json({
           errors: errors.array(),
-          message: "Invalid data for registration",
+          message: "Registration invalid data",
         });
       }
       const { email, password } = req.body;
@@ -45,7 +45,7 @@ router.post(
 router.post(
   "/login",
   [
-    check("email", "Type the valid email").normalizeEmail().isEmail(),
+    check("email", "Type the valid email").isEmail(),
     check("password", "Type the password").exists(),
   ],
   async (req, res) => {
@@ -54,18 +54,18 @@ router.post(
       if (!errors.isEmpty()) {
         return res.status(400).json({
           errors: errors.array(),
-          message: "Invalid data for registration",
+          message: "Registration invalid data",
         });
       }
       const { email, password } = req.body;
+
       const user = await User.findOne({ email });
       if (!user) {
-        res.status(400).json({ message: `Email or password is wrong` });
+        return res.status(400).json({ message: "Email or password is wrong" });
       }
-      const isMatch = bcrypt.compare(password, user.password);
+      const isMatch = await bcrypt.compare(password, user.password);
       if (!isMatch) {
         return res.status(400).json({
-          errors: errors.array(),
           message: "Email or password is wrong",
         });
       }
