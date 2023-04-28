@@ -14,6 +14,10 @@ export const AuthPage = () => {
   });
 
   useEffect(() => {
+    window.M.updateTextFields();
+  }, []);
+
+  useEffect(() => {
     message(error);
     clearError();
   }, [error, message, clearError]);
@@ -39,7 +43,7 @@ export const AuthPage = () => {
     <div className="row">
       <div className="col s6 offset-s3">
         <h1>Shorten your link</h1>
-        <div className="card teal lighten-3">
+        <div className="card teal lighten-2">
           <div className="card-content white-text">
             <span className="card-title">Authorization</span>
             <div>
@@ -66,7 +70,7 @@ export const AuthPage = () => {
           <div className="card-action">
             <button
               className="btn teal darken-2"
-              style={{ marginRight: 10 }}
+              style={{ marginRight: 15 }}
               onClick={loginHandler}
               disabled={loading}
             >
