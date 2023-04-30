@@ -22,7 +22,7 @@
     "express-validator": "^7.0.1",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.4",
-    "nanoid": "^4.0.2"
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
     "concurrently": "^8.0.1",

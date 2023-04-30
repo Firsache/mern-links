@@ -19,3 +19,12 @@ input[type="text"]:not(.browser-default),
 input[type="password"]:not(.browser-default) {
   border-bottom: 1px solid #ffffff;
 }
+
+.create-link label {
+  color: #00796b;
+}
+
+.create-link input[type="text"]:not(.browser-default),
+.create-link input[type="password"]:not(.browser-default) {
+  border-bottom: 1px solid #00796b;
+}

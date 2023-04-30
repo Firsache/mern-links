@@ -50,6 +50,7 @@ export const AuthPage = () => {
               <div className="input-field">
                 <input
                   id="email"
+                  placeholder="Enter the email"
                   type="text"
                   name="email"
                   value={form.email}
@@ -60,6 +61,7 @@ export const AuthPage = () => {
               <div className="input-field">
                 <input
                   id="password"
+                  placeholder="Enter the password"
                   type="password"
                   name="password"
                   value={form.password}
