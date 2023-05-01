@@ -1,4 +1,3 @@
-import c from "config";
 import { useCallback, useContext, useEffect, useState } from "react";
 import { LinksList } from "../components/LinksList";
 import { Loader } from "../components/Loader";
@@ -8,7 +7,7 @@ import { useHttp } from "../hooks/http.hook";
 export const LinksPage = () => {
   const { token } = useContext(AuthContext);
   const { request, loading } = useHttp();
-  const { links, setLinks } = useState([]);
+  const [links, setLinks] = useState([]);
 
   const fetchLinks = useCallback(async () => {
     try {
